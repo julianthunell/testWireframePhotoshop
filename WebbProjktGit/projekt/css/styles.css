@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Printvetica';
+    src: url(/projekt/fonts/Printvetica.otf);
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 12vh;
+    background-color: rgb(233, 233, 233);
+}
+nav div ul{
+    display: flex;
+    justify-content: space-around;
+    width: 50vh;
+}
+nav div ul li a{
+    text-decoration: none;
+    font-family: 'Printvetica';
+    font-size: 22px;
+    color: #191919; 
+}
+nav div ul li{
+    list-style: none;
+}
+.logga{
+    width: 15vh;
+}
+.varukorg{
+    width: 10vh;
+}
+.streck{
+    min-width: 40px;
+    min-height: 5px;
+    background-color: #191919;
+    margin: 5px;
+    border-radius: 5px;
+}
+.sko{
+    width: 45vh; 
+    height: 24vh; 
+    object-fit: cover;
+    object-position: 25% 60%;
+    filter: brightness(104%);
+}
+.store{
+    display: flex;
+    justify-content: center;
+}
+.skor{
+    width: 150vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+}
+.pRubrik{
+    font-family: 'Printvetica';
+    font-size: 22px;
+}
+@media screen and (max-width: 1007px) {
+    nav div ul{
+        display: none;
+    }
+    .länkar{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1008px) {
+    .burgerKnapp{
+        display: none;
+    }
+}
+@media screen and (max-width: 640px){
+    .logga{
+        width: 10vh;
+    }
+}
