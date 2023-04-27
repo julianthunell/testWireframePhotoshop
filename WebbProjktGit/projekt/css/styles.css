@@ -7,6 +7,7 @@
     font-family: 'Printvetica';
     src: url(/projekt/fonts/Printvetica.otf);
 }
+
 nav{
     display: flex;
     justify-content: space-around;
@@ -42,7 +43,7 @@ nav div ul li{
     border-radius: 5px;
 }
 .sko{
-    width: 45vh; 
+    width: 20vw; 
     height: 24vh; 
     object-fit: cover;
     object-position: 25% 60%;
@@ -53,16 +54,44 @@ nav div ul li{
     justify-content: center;
 }
 .skor{
-    width: 150vh;
+    width: 80vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 50px;
+    gap: 20px;
 }
 .pRubrik{
     font-family: 'Printvetica';
     font-size: 22px;
+    color: #191919;
 }
+.transition{
+    height: 20vh;
+    background-color: #191919;
+    display: flex;
+    justify-content: center;
+}
+.transitionLogga{
+    width: 10vw;
+    filter: invert();
+    align-self: center;
+}
+.pPris{
+    font-family: 'Libre Bodoni';
+    color: #727272;
+}
+button {
+    background-color: #e4e4e4;
+    border: none;
+    color: #FFFFFF;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
 @media screen and (max-width: 1007px) {
     nav div ul{
         display: none;
@@ -70,6 +99,16 @@ nav div ul li{
     .länkar{
         display: none;
     }
+    .sko{
+        width: 30vw;
+        height: 24vh; 
+        object-fit: cover;
+        object-position: 25% 60%;
+    }
+    .transition{
+        height: 15vh;
+    }
+    
 }
 
 @media screen and (min-width: 1008px) {
@@ -80,5 +119,14 @@ nav div ul li{
 @media screen and (max-width: 640px){
     .logga{
         width: 10vh;
+    }
+    .sko{
+        width: 50vw;
+        height: 24vh; 
+        object-fit: cover;
+        object-position: 25% 60%;
+    }
+    .transition{
+        height: 10vh;
     }
 }
