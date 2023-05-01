@@ -7,9 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Libre Bodoni' rel='stylesheet'>
-    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;750&display=swap" rel="stylesheet">
+    <script src="./script.js"></script>
 </head>
-<body>
+<body onload="fungera()">
     <nav>
         <div class="burgerKnapp">
             <div class="streck"></div>
@@ -29,7 +32,7 @@
             </ul>
         </div>
         <div class = varukorgDiv>
-            <img class="varukorg" src="./bilder/varukorg.png" alt="">
+            <a href=""><img class="varukorg" src="./bilder/varukorg.png" alt=""></a>
         </div>
     </nav>
     <div>
@@ -38,45 +41,83 @@
     <div class="transition">
         <img class="transitionLogga" src="./bilder/Nike.png" alt="">
     </div>
-    <div class="store">
+    <main class="store">
         <div class="skor">
             <div class="skobox">
                 <img class="sko" src="./bilder/skor/sko1.webp" alt="">
                 <p class="pRubrik">Nike Dunk Low </p>
                 <p class="pPris">1599kr </p>
-                <button onclick="add('Nike Dunk Low blå', 1599)">Buy</button>
+                <button onclick="add(1, 1599)">Buy</button>
+                <button onclick="remove(1, 1599)">Delete</button>
             </div>
             <div class="skobox">
                 <img class="sko" src="./bilder/skor/sko2.webp" alt="">
-                <p class="pRubrik">Nike Air Force 1 '07</p>
+                <p class="pRubrik">Nike Air Force 1 '06</p>
                 <p class="pPris">1299kr </p>
-                <button onclick="add('Nike Air Force 1 07 grå', 1299)">Buy</button>
+                <button onclick="add(2, 1299)">Buy</button>
+                <button onclick="remove(2, 1299)">delete</button>
+
             </div>
             <div class="skobox">
                 <img class="sko" src="./bilder/skor/sko3.webp" alt="">
                 <p class="pRubrik">Nike Air Force 1 '07 </p>
                 <p class="pPris">1299kr </p>
-                <button onclick="add('Nike Air Force 1 07 vit', 1299)">Buy</button>
+                <button onclick="add(3, 1299)">Buy</button>
+                <button onclick="remove(3, 1299)">delete</button>
+
             </div>
             <div class="skobox">
                 <img class="sko" src="./bilder/skor/sko4.webp" alt="">
-                <p class="pRubrik">Nike Air Force 1 '07 </p>
+                <p class="pRubrik">Nike Dunk Low </p>
                 <p class="pPris">1249kr </p>
-                <button onclick="add('Nike Dunk Low retro', 1249)">Buy</button>
+                <button onclick="add(4, 1249)">Buy</button>
+                <button onclick="remove(4, 1249)">delete</button>
             </div>
             <div class="skobox">
                 <img class="sko" src="./bilder/skor/sko5.webp" alt="">
-                <p class="pRubrik">Nike Air Force 1 '07 </p>
+                <p class="pRubrik">Nike Dunk Low</p>
                 <p class="pPris">1599kr </p>
-                <button onclick="add('Nike Dunk Low svart', 1599)">Buy</button>
+                <button onclick="add(5, 1599)">Buy</button>
+                <button onclick="remove(5, 1599)">delete</button>
             </div>
             <div class="skobox">
                 <img class="sko" src="./bilder/skor/sko6.webp" alt="">
                 <p class="pRubrik">Nike ISPA Link</p>
                 <p class="pPris">2549kr </p>
-                <button onclick="add('Nike ISPA Link', 2549)">Buy</button>
+                <button onclick="add(6, 2549)">Buy</button>
+                <button onclick="remove(6, 2549)">delete</button>
             </div>
         </div>
+    </main>
+    <h1 style="font-family: 'Montserrat', 'Times New Roman', Times, serif;">Varukorg</h1>
+    <div>
+        <div class="kundvagnsDiv">
+            <h3>Nike Dunk Low blå: </h3>
+            <p id="antal1">0</p>
+        </div>      
+        <div class="kundvagnsDiv">
+            <h3>Nike Air Force 1 '06: </h3>
+            <p id="antal2">0</p>
+        </div>   
+        <div class="kundvagnsDiv">
+            <h3>Nike Air Force 1 '07: </h3>
+            <p id="antal3">0</p>
+        </div>   
+        <div class="kundvagnsDiv">
+            <h3>Nike Dunk Low R: </h3>
+            <p id="antal4">0</p>
+        </div>   
+        <div class="kundvagnsDiv">
+            <h3>Nike Dunk Low S: </h3>
+            <p id="antal5">0</p>
+        </div>   
+        <div class="kundvagnsDiv">
+            <h3>Nike ISPA Link: </h3>
+            <p id="antal6">0</p>
+        </div>     
     </div>
+    <input type="button" onclick="prisBeräkning();" value="Få totala pris" />
+    <ul id="prisHållare">
+    </ul>
 </body>
 </html>
